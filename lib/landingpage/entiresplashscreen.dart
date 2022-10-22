@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:togandtrimapp/theme.dart';
+import '../theme.dart';
 import 'landingdisplay.dart';
 
 class SplashScreen extends StatefulWidget {

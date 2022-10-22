@@ -1,7 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:togandtrimapp/routes.dart';
+
 import 'landingpage/entiresplashscreen.dart';
+import 'routes.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
