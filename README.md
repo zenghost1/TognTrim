@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 1. Preferably use barrel pattern on shared.dart folder. If unknown you can search about it.
 
-2. I have already added basic structure or pattern to be followed and deleted linux,macOS,windows files as they are unnecessary in this project.
+2. added basic structure or pattern to be followed and deleted linux,macOS,windows files as they are unnecessary in this project.
