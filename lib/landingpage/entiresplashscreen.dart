@@ -6,13 +6,16 @@ import 'landingdisplay.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = '/splash';
+
   const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
   late DecorationImage background;
+
   @override
   void initState() {
     super.initState();

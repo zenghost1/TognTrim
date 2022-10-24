@@ -1,7 +1,7 @@
-
+import 'shared/loading_animation.dart';
 import 'landingpage/entiresplashscreen.dart';
 
-
-class Routes {
-  static const String splash = SplashScreen.routeName;
-}
+var appRoutes = {
+  '/': (context) => const SplashScreen(),
+  '/loading': (context) => const LoadingAnimation(),
+};

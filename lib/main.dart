@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 
 import 'landingpage/entiresplashscreen.dart';
 import 'routes.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -18,10 +20,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'GeneralSans',
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      initialRoute: Routes.splash,
-      routes: {
-        Routes.splash: (context) => const SplashScreen(),
-      },
+      initialRoute: '/',
+      routes: appRoutes,
     );
   }
 }

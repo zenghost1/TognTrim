@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../theme.dart';
 
 class LandingDisplay extends StatefulWidget {
@@ -34,7 +33,7 @@ class _LandingDisplayState extends State<LandingDisplay> {
     return Scaffold(
       appBar: AppBar(
         actions: [logo],
-        shadowColor: Colors.transparent,
+        //shadowColor: Colors.transparent,
         backgroundColor: Colors.transparent,
       ),
       extendBodyBehindAppBar: true,
@@ -71,7 +70,9 @@ class _LandingDisplayState extends State<LandingDisplay> {
                   ),
                   Center(
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/loading');
+                      },
                       hoverColor: landingpagetextcolor,
                       child: Container(
                         color: Colors.black,
