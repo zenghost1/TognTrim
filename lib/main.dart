@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:togandtrimapp/authpage/signupscreen.dart';
 
 import 'landingpage/entiresplashscreen.dart';
 import 'routes.dart';
