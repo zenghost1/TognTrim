@@ -6,6 +6,7 @@ const authBackgroundColor = Colors.white;
 const authPrimaryColor = Color.fromARGB(255, 129, 0, 8);
 const authSecondaryColor = Color.fromARGB(255, 133, 133, 133);
 final authTheme = ThemeData(
+  fontFamily: "sfpro",
   colorScheme: ColorScheme.fromSwatch().copyWith(
     primary: authPrimaryColor,
   ),

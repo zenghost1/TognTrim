@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:togandtrimapp/authpage/signupscreen.dart';
+import 'package:togandtrimapp/pages/signupscreen.dart';
 
 import 'landingpage/entiresplashscreen.dart';
 import 'routes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,13 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'GeneralSans',
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      ),
-      initialRoute: '/',
-      routes: appRoutes,
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          fontFamily: 'GeneralSans',
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        ),
+        initialRoute: '/main',
+        routes: appRoutes);
   }
 }
