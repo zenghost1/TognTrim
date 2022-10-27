@@ -13,12 +13,20 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
   late DecorationImage background;
-
+  late final _animation;
+  late AnimationController _controller;
   @override
   void initState() {
     super.initState();
+
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      vsync: this,
+    );
+    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
 
     background = DecorationImage(
         colorFilter:
@@ -35,6 +43,12 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   void didChangeDependencies() {
     precacheImage(background.image, context);
     super.didChangeDependencies();
@@ -42,14 +56,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    _controller.forward();
     return Container(
-      height: MediaQuery.of(context).size.height,
-      color: landingpagebackgroundcolor,
-      child: Center(
-        child: Image.network(
-            "https://togandtrim.com/wp-content/uploads/2022/06/Tog-Trim_final.jpg"),
-      ),
-    );
+        height: MediaQuery.of(context).size.height,
+        color: landingpagebackgroundcolor,
+        child: Center(
+          child: FadeTransition(
+            opacity: _animation,
+            child: Image.network(
+                "https://togandtrim.com/wp-content/uploads/2022/06/Tog-Trim_final.jpg"),
+          ),
+        ));
   }
 }
 
