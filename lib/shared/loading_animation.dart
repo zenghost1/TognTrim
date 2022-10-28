@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class LoadingAnimation extends StatelessWidget {
@@ -6,6 +8,9 @@ class LoadingAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //i know beautifully ugly code
+    Timer(Duration(seconds: 2),
+        () => Navigator.pushReplacementNamed(context, "/main"));
+
     return Scaffold(
       body: Center(
         child: SizedBox(
@@ -82,6 +87,12 @@ class _LoadingAnimationComponentState extends State<LoadingAnimationComponent>
       }
     });
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   @override

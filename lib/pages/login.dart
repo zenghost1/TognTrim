@@ -126,14 +126,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
                     prefixIcon: const Icon(Icons.lock_outline_rounded),
                     suffixIcon: IconButton(
-                      icon: const Icon(Icons.visibility),
+                      icon: !passVisible
+                          ? const Icon(Icons.visibility)
+                          : const Icon(Icons.visibility_off),
                       onPressed: () {
                         setState(() {
                           passVisible = !passVisible;
                         });
                       },
                     ),
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                         borderSide: BorderSide(color: authSecondaryColor))),
                 validator: (value) {
                   if (value == null || value.isEmpty) {

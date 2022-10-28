@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'GeneralSans',
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         ),
-        initialRoute: '/main',
+        initialRoute: '/',
         routes: appRoutes);
   }
 }

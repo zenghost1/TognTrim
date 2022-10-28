@@ -6,7 +6,7 @@ import 'shared/loading_animation.dart';
 import 'landingpage/entiresplashscreen.dart';
 
 var appRoutes = {
-  '/xyz': (context) => const SplashScreen(),
+  '/': (context) => const SplashScreen(),
   '/loading': (context) => const LoadingAnimation(),
   '/signup': (context) => const SignupScreen(),
   '/main': (context) => const MainScreen(),
